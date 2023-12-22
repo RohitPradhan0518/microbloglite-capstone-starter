@@ -26,11 +26,14 @@ body{
 form.postInput{
     display: flex;
     justify-content: center;
-    background:linear-gradient(to top,#342f36,#3c3a3d);
+    background:linear-gradient(to top,#473857, #6c5674);
     
 }
 .card-header{
     display:flex;
-    background-color:#342f36;
+    background: linear-gradient(to top, #473857, #81668b);
+    background: -webkit-linear-gradient(to top, #342f36, #8c6baa);
+    background: -moz-linear-gradient(to top, #64536e, #8e76a7);
+    background: -o-linear-gradient(to top, #594f63, #8c6a94);
     align-items: center;
 }
