@@ -1,6 +1,6 @@
 "use strict";
 
-const apiBaseURL = "https://microbloglite.herokuapp.com";
+const apiBaseURL = "https://microbloglite.onrender.com";
 
 function getLoginData () {
     const loginJSON = window.localStorage.getItem("login-data");
