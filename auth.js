@@ -43,6 +43,7 @@ function login (loginData) {
         .then(response => response.json())
         .then(loginData => {
             window.localStorage.setItem("login-data", JSON.stringify(loginData));
+            localStorage.token = loginData.token
             window.location.assign("/posts");  // redirect
 
             return loginData;
