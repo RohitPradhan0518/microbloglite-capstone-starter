@@ -102,12 +102,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   /*-- end reset --*/
   body {
-    background: #474349;
+    /* background: radial-gradient(circle,rgba(67,69,112,1) 3%, rgba(35,36,57,1)60%); */
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #342f36, #8665a5);
-    background: -moz-linear-gradient(to top, #64536e, #433e48);
-    background: -o-linear-gradient(to top, #59545e, #524954);
-    background: linear-gradient(to top, #32273d, #aa84b8);
+    /* background: -webkit-linear-gradient(to top, #342f36, #8665a5);
+    background: -moz-linear-gradient(to top, #4c4352, #433e48);
+    background: -o-linear-gradient(to top, #59545e, #524954); */
+    background: radial-gradient(circle,rgba(67,69,112,1) 3%, rgba(35,36,57,1)60%);
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
@@ -139,7 +139,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding: 3em;
   }
   
-  input[type="text"], input[type="email"], input[type="password"] {
+  input[type="text"], input[type="fullName"], input[type="password"] {
     font-size: 0.9em;
     color: #fff;
     font-weight: 100;
@@ -159,7 +159,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-family: 'Roboto', sans-serif;
   }
   
-  input.email, input.text.w3lpass {
+  input.fullName, input.text.w3lpass {
     margin: 2em 0;
   }
   
@@ -244,7 +244,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   /*-- //main --*/
   /*-- checkbox --*/
-  .wthree-text label {
+  .checkBox label {
     font-size: 0.9em;
     color: #fff;
     font-weight: 200;
