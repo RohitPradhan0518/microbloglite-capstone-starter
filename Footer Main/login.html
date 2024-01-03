@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Log In</title>
-	<link rel="stylesheet" type="text/css" href="slide navbar style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="slide navbar style.css"> -->
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="Login.css">
 <script src ="./registration.js"></script>
@@ -13,22 +13,20 @@
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form>
+				
 					<label for="chk" aria-hidden="true">Sign up</label>
 					<input type="text" name="txt" placeholder="User name" required="" id="Signup_username">
-					<input type="email" name="email" placeholder="Email" required="" id="email">
+					<input name="fullName" placeholder="Full Name" required="" id="fullName">
 					<input type="password" name="pswd" placeholder="Password" required="" id="Signup_password">
-					<button>Sign up</button>
-				</form>
+					<input type="submit" value="Sign Up" id="signup">
+				
 			</div>
 
 			<div class="login">
-				<form id="loginForm">
 					<label for="chk" aria-hidden="true">Login</label>
 					<input type="text" name="txt" placeholder="User name" required="" id="username">
 					<input type="password" name="pswd" placeholder="Password" required="" id="password">
-					<input type="submit" value="login">
-				</form>
+					<input type="submit" value="Login" id="login">
 			</div>
 	</div>
 </body>
