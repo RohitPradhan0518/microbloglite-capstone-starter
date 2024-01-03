@@ -24,7 +24,7 @@
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="../auth.js"></script> 
     <script>
-        if (isLoggedIn() === false) window.location.replace("../register/");
+        if (isLoggedIn() === false) window.location.replace("../Footer Main/login.html");
     </script>
     
 </head>
@@ -45,6 +45,7 @@
                         <a class="nav-link" href="../page.html">Home</a>
                         <a class="nav-link active" aria-current="page" href="index.html">Posts</a>
                         <a class="nav-link" href="../Profile">Profile</a>
+                        <button class="logout" id="logout">Logout</button>
                     </div>
                 </div>
             </div>
@@ -54,9 +55,7 @@
     <main>
         <div class="card container postbox">
             <div class="card-header">Posts</div>
-            <select id="userList">
-                <option value="">Select a user to filter posts</option>
-            </select>
+            
             <div class="card-text h-75" id="results">
 
             </div>
