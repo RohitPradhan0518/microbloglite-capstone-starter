@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "password": Signup_password.value,
           })
        }) .then (r => r.json()) .then (data => {
-        window.location = "/"
+        window.location = "/Posts"
        })
     });
 });
