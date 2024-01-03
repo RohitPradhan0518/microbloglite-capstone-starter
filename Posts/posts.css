@@ -17,7 +17,7 @@ body{
 .postbox{
     display:flex;
     
-    height:70em;
+    
     background: linear-gradient(to top, hsl(269, 20%, 57%,.3), hsl(283, 31%, 24%,.3));
     background: -webkit-linear-gradient(to top, hsl(269, 20%, 57%,.3), hsl(283, 31%, 24%,.3));
     background: -moz-linear-gradient(to top, hsl(269, 20%, 57%,.3), hsl(283, 31%, 24%,.3));
@@ -36,4 +36,7 @@ form.postInput{
     background: -moz-linear-gradient(to top, #64536e, #8e76a7);
     background: -o-linear-gradient(to top, #594f63, #8c6a94);
     align-items: center;
+}
+.userPost{
+    color: antiquewhite;
 }

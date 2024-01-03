@@ -22,11 +22,11 @@
     <title>/POSTS</title>
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
-    <!--<script src="../auth.js"></script> -->
+    <script src="../auth.js"></script> 
     <script>
-        if (isLoggedIn() === false) window.location.replace("/");
+        if (isLoggedIn() === false) window.location.replace("../register/");
     </script>
-    <script src="posts.js"></script>
+    
 </head>
 <body>
 
@@ -42,9 +42,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="../page.html">Home</a>
                         <a class="nav-link active" aria-current="page" href="index.html">Posts</a>
-                        <a class="nav-link" href="index.html">Profile</a>
+                        <a class="nav-link" href="../Profile">Profile</a>
                     </div>
                 </div>
             </div>
@@ -54,12 +54,15 @@
     <main>
         <div class="card container postbox">
             <div class="card-header">Posts</div>
-            <div class="card-text h-75">
+            <select id="userList">
+                <option value="">Select a user to filter posts</option>
+            </select>
+            <div class="card-text h-75" id="results">
 
             </div>
-            <form class="card container h-25 postInput">
+            <form class="card container h-25 postInput " id="messageTemplate">
             
-                <input class="h-50" type="text" id="postText"> <input type="submit" id="submitPost" value="Submit">
+                <input class="h-50" type="text" id="message"> <input type="submit" id="submitPost" value="Submit" >
             </form>
         </div>
             
