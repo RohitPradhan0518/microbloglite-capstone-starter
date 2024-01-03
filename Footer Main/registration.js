@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const apiBaseURL = "https://microbloglite.onrender.com";
-    const  checkBox = document.querySelector(".checkBox");
+    const  checkBox = document.querySelector(".signup");
     const SIGNUP = document.querySelector("input[type=submit]")
     SIGNUP.addEventListener("click", async e =>{
        fetch (apiBaseURL + "/api/users", {
