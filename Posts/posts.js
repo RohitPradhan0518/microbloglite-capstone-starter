@@ -19,20 +19,24 @@ document.addEventListener("DOMContentLoaded",e=>{
     .then(response=>response.json())
     .then(renderPosts)    
 })
-async function createPost(data={}){
+async function createPost(){
     try{
-        const response =await fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts", {
+        const response =await fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts/", {
             method: "POST" ,
-            headers:{"Authorization" : `Bearer ${token}`},
-            body: JSON.stringify(data)
+            headers:{"Authorization" : `Bearer ${localStorage.token}`,
+            "Content-Type" : "application/json"},
+            body: JSON.stringify({text:document.getElementById("message").value})
         });
    const result=await response.json();
    console.log("Success:", result);
+  // window.location.reload()
+  window.location=window.location
     }catch (error){
         console.error("Error:",error);
     }
 }
-document.getElementById("submitPost").onclick=createPost(document.getElementById("message"))
+document.getElementById("submitPost").onclick=createPost
+//document.getElementById("submitPost").onclick=e=>createPost({text:document.getElementById("message").value});
 function logout () {
     const loginData = getLoginData();
 
@@ -60,7 +64,7 @@ function logout () {
             window.location.assign("/");  // redirect back to landing page
         });
 }
-document.getElementById("logout").onclick=logout()
+document.getElementById("logout").onclick=logout
 function getLoginData () {
     const loginJSON = window.localStorage.getItem("login-data");
     return JSON.parse(loginJSON) || {};
