@@ -40,3 +40,12 @@ form.postInput{
 .userPost{
     color: antiquewhite;
 }
+.logout{
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    color: antiquewhite;
+    background-color: #473857;
+    border-radius:6px;
+    border-style: hidden;
+}
