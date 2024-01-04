@@ -3,7 +3,8 @@ function getPost(item){
     <div class="card m-4 "> 
         <div class="card-header userPost">${item.username} </div>
         <div class="card-subtitle"> ${item._id}</div>
-        <div class="card-text">${item.text} </div> 
+        <div class="card-text ">${item.text} <br><p class="time">${item.createdAt}</p></div> 
+        <button class="like" id="like"> Like</button>
     </div>
     `
 }
@@ -69,3 +70,11 @@ function getLoginData () {
     const loginJSON = window.localStorage.getItem("login-data");
     return JSON.parse(loginJSON) || {};
 }
+function like(_id){
+    fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes",{
+        method: "POST",
+        headers:{"Authorization" : `Bearer ${localStorage.token}`,
+        "Content-Type" : "application/json"}
+    })
+}
+document.getElementById("like").onclick=like

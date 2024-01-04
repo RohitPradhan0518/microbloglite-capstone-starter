@@ -49,3 +49,15 @@ form.postInput{
     border-radius:6px;
     border-style: hidden;
 }
+.card-subtitle{
+    padding: .3em;
+    font-size: small;
+}
+.card-text{
+    padding: .3em;
+}
+.time{
+    font-size: small;
+    display: flex;
+    margin-bottom: 0;
+}
