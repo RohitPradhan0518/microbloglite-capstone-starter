@@ -52,12 +52,18 @@ form.postInput{
 .card-subtitle{
     padding: .3em;
     font-size: small;
+    background-color: rgb(241, 232, 247);
 }
 .card-text{
     padding: .3em;
+    background-color: rgb(241, 232, 247);
 }
 .time{
     font-size: small;
     display: flex;
     margin-bottom: 0;
+}
+.like{
+    background-color: #9b999b;
+    border-radius: 6px;
 }
