@@ -1,10 +1,14 @@
 function getPost(item){
+    if(item.text.match(/<\/?(?:(?!img).)+>/)){
+        item.text="unknown HTML eliminated"
+    }
     return `
     <div class="card m-4 "> 
         <div class="card-header userPost">${item.username} <p class="time">${item.createdAt}</p></div>
         <div class="card-subtitle"> </div>
         <div class="card-text ">${item.text} <br></div> 
         <button class="like likeElement" data-postid="${item._id}"> ${item.likes.length} Likes</button>
+        <button class="like deleteButton bg-danger" data-postid="${item._id}"> Delete</button>
     </div>
     `
 }
@@ -13,6 +17,8 @@ function renderPosts(data){
     results.innerHTML=data.map(getPost).join("")
     const buttons =[...document.getElementsByClassName("likeElement")];
     buttons.forEach(e=>e.onclick=like);
+    const deleteButtons =[...document.getElementsByClassName("deleteButton")];
+    deleteButtons.forEach(e=>e.onclick=deletePost);
 }
 async function createPost(){
     try{
@@ -84,3 +90,13 @@ document.addEventListener("DOMContentLoaded",e=>{
     .then(response=>response.json())
     .then(renderPosts)    
 })
+function deletePost(e){
+    const _id=e.target.dataset.postid
+    console.log(_id)
+    fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts/"+_id,{
+        method: "DELETE",
+        headers:{"Authorization" : `Bearer ${localStorage.token}`,
+        "accept" : "application/json"},
+        body: JSON.stringify({"postId":_id})
+    })
+}
