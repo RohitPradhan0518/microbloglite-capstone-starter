@@ -1,51 +1,74 @@
-<a href="/">home</a>
-<div class="container d-flex justify-content-center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0" />
+    <title>PROFILE</title>
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--CSS-->
+    <link rel="stylesheet" href="profile.css" />
+    <script src="profile.js"></script>
 
-    <div class="card p-3 py-4">
-        <div class="text-center"> 
-		<img src="https://i.imgur.com/stD0Q19.jpg" width="100" class="rounded-circle">
-            <h3 class="mt-2" id="fullName">Gertrude Kingunza</h3>
-			<input id="fullNameInput" placeholder="Full Name"><br>
-			<span class="mt-1 clearfix" id="bio">Software developer</span><br>
-			<input id="bioInput" placeholder="bio">
-			<h4>password</h4>
-			<input id="passwordInput" type="password"><br>
-			<button id="save">Save</button>
-			
-			<div class="row mt-3 mb-3">
-			
-			  <div class="col-md-4">
-				<h5>Projects</h5>
-				<span class="num">10</span>
-			  </div>
-			  <div class="col-md-4">
-			  <h5>Projects</h5>
-				<span class="num">10</span>
-			  </div>
-			  <div class="col-md-4">
-			  <h5>Projects</h5>
-				<span class="num">10</span>
-			  </div>
-			
-			</div>
-			
-			<hr class="line">
-			
-			<small class="mt-4">I am an Software developer working at fa-google Inc at Dallas,USA</small>
-              <div class="social-buttons mt-5"> 
-			   <button class="neo-button"><i class="fa fa-facebook fa-1x"></i> </button> 
-			   <button class="neo-button"><i class="fa fa-linkedin fa-1x"></i></button> 
-			   <button class="neo-button"><i class="fa fa-google fa-1x"></i> </button> 
-			   <button class="neo-button"><i class="fa fa-youtube fa-1x"></i> </button>
-			   <button class="neo-button"><i class="fa fa-twitter fa-1x"></i> </button>
-			  </div>
-			  
-			 <div class="profile mt-5">
-			 
-			 <button class="profile_button px-5">View profile</button>
+</head>
+<body>
+    <div class="header__wrapper">
+        <header></header>
+        <div class="cols__container">
+            <div class="left__col">
+                <div class="img__container">
+                    <img src="photos/photo2.JPG" alt="Thyly kanku" />
+                    <span></span>
+                </div>
+                <h2 id="usernameElement">Loading</h2>
+                <p>sofware engineer</p>
+                <p id="usertagElement">loading</p>
 
-		</div>
-			   
+                <ul class="about">
+                    <li><spam>4.073</spam>Followers</li>
+                    <li><spam>322</spam>Following</li>
+                    <li><spam>200.543</spam>Attractions</li>
+
+                </ul>
+
+                <div class="content">
+                    <textarea id="bioElement">
+                        tech lifestyle
+                    </textarea>
+                    <button id="saveElement">Save</button>
+
+                    <ul>
+                        <li><i class="fab fa-twitter"></i></li>
+                        <li><i class="fab fa-pinterest"></i></li>
+                        <li><i class="fab fa-facebook"></i></li>
+                        <li><i class="fab fa-instagram"></i></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right__col">
+                <nav>
+                    <ul>
+                      <li><a href="#">photos</a></li>
+                      <li><a href="#">galleries</a></li>
+                      <li><a href="./Posts/index.html">group</a></li>
+                      <li><a href="#">about</a></li>
+                    </ul>
+                    <button>Follow</button>
+                </nav>
+
+                <div class="photos">
+                    <img src="/photos/insta1.JPG" alt="photo" />
+                    <img src="/photos/insta2.JPG" alt="photo" />
+                    <img src="/photos/insta3.JPG" alt="photo" />
+                    <img src="/photos/insta4.JPG" alt="photo" />
+                    <img src="/photos/insta5.JPG" alt="photo" />
+                    <img src="/photos/insta6.JPG" alt="photo" />
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</body>
+</html>

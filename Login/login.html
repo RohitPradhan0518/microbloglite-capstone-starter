@@ -38,10 +38,13 @@
 		loginForm.addEventListener("submit",e=>{
 		console.log("sumbit")
 		e.preventDefault()
+		localStorage.password = password.value
 		login({
 			username:username.value,
 			password:password.value,
 
+		}).then(reponse => {
+			console.log(response)
 		})
 		return false
 		})

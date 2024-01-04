@@ -1,1 +1,0 @@
-const apiBaseURL = "https://microbloglite.onrender.com";
