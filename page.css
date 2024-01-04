@@ -27,7 +27,7 @@ header{
     justify-content: stretch;
     }
     .navbar{
-        background: rgba(0,0,0,0.6);
+        background:linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
         padding: 1.2rem;
     
     }
@@ -43,7 +43,7 @@ header{
     color: #fff;
     font-size: 2rem;
     display: block;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     font-family: var(--Playfair);
     letter-spacing: 1px;
