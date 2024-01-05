@@ -23,7 +23,7 @@ Practice and experimentation provide experience, and experience provides confide
 ![login](https://github.com/RohitPradhan0518/microbloglite-capstone-starter/assets/146854297/1fa05e6e-e71e-4b59-8e8e-567d035ee918)
 ### The posts page designed by Daemeon Miller with the help of our teacher Kevin Long who helped make sure that the fetch requests behaved as intended. 
 ![posts](https://github.com/RohitPradhan0518/microbloglite-capstone-starter/assets/146854297/0d615cba-64fa-43e7-b4f7-b788b1704c97)
-### The profile page designed by Thyly Kanku with Trevor Belmont aiding with the JS to make sure it pulled the info for the profile page.
+### The profile page designed by Thyly Kanku and Gertrude Kinguza with Trevor Belmont aiding with the JS to make sure it pulled the info for the profile page.
 ![profile](https://github.com/RohitPradhan0518/microbloglite-capstone-starter/assets/146854297/6689b0c5-4490-4d71-8a88-a0d050e2cd44)
 
 ## An interesting piece of code 

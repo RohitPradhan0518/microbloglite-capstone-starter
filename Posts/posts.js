@@ -67,15 +67,17 @@ function getLoginData () {
     const loginJSON = window.localStorage.getItem("login-data");
     return JSON.parse(loginJSON) || {};
 }
-function like(e){
+async function like(e){
     const _id=e.target.dataset.postid
     console.log(_id)
-    fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes",{
+    await fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes",{
         method: "POST",
         headers:{"Authorization" : `Bearer ${localStorage.token}`,
         "Content-Type" : "application/json"},
         body: JSON.stringify({"postId":_id})
+        
     })
+    window.location=window.location
 }
 document.addEventListener("DOMContentLoaded",e=>{
     document.getElementById("submitPost").onclick=createPost;
@@ -89,13 +91,14 @@ document.addEventListener("DOMContentLoaded",e=>{
     .then(response=>response.json())
     .then(renderPosts)    
 })
-function deletePost(e){
+async function deletePost(e){
     const _id=e.target.dataset.postid
     console.log(_id)
-    fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts/"+_id,{
+    await fetch("http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts/"+_id,{
         method: "DELETE",
         headers:{"Authorization" : `Bearer ${localStorage.token}`,
         "accept" : "application/json"},
         body: JSON.stringify({"postId":_id})
     })
+    window.location=window.location
 }
