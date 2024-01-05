@@ -5,7 +5,6 @@ function getPost(item){
     return `
     <div class="card m-4 "> 
         <div class="card-header userPost">${item.username} <p class="time">${item.createdAt}</p></div>
-        <div class="card-subtitle"> </div>
         <div class="card-text ">${item.text} <br></div> 
         <button class="like likeElement" data-postid="${item._id}"> ${item.likes.length} Likes</button>
         <button class="like deleteButton bg-danger" data-postid="${item._id}"> Delete</button>
